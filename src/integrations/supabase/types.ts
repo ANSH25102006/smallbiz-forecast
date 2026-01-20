@@ -14,7 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      stores: {
+        Row: {
+          aadhaar_number: string
+          address: string
+          city: string
+          created_at: string
+          email: string
+          id: string
+          is_verified: boolean | null
+          latitude: number | null
+          longitude: number | null
+          owner_name: string
+          pan_number: string | null
+          phone_number: string
+          pincode: string
+          store_name: string
+          store_type: string | null
+          updated_at: string
+        }
+        Insert: {
+          aadhaar_number: string
+          address: string
+          city: string
+          created_at?: string
+          email: string
+          id?: string
+          is_verified?: boolean | null
+          latitude?: number | null
+          longitude?: number | null
+          owner_name: string
+          pan_number?: string | null
+          phone_number: string
+          pincode: string
+          store_name: string
+          store_type?: string | null
+          updated_at?: string
+        }
+        Update: {
+          aadhaar_number?: string
+          address?: string
+          city?: string
+          created_at?: string
+          email?: string
+          id?: string
+          is_verified?: boolean | null
+          latitude?: number | null
+          longitude?: number | null
+          owner_name?: string
+          pan_number?: string | null
+          phone_number?: string
+          pincode?: string
+          store_name?: string
+          store_type?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

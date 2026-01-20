@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Package, TrendingUp, AlertTriangle, DollarSign } from "lucide-react";
 import Header from "@/components/layout/Header";
 import MetricCard from "@/components/dashboard/MetricCard";
@@ -5,6 +6,7 @@ import SalesChart from "@/components/dashboard/SalesChart";
 import ProductTable from "@/components/dashboard/ProductTable";
 import InsightCard from "@/components/dashboard/InsightCard";
 import QuickActions from "@/components/dashboard/QuickActions";
+import StoreNetworkSection from "@/components/stores/StoreNetworkSection";
 
 const Index = () => {
   return (
@@ -33,7 +35,7 @@ const Index = () => {
           <div className="animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <MetricCard
               title="Monthly Sales"
-              value="$62,400"
+              value="₹62,400"
               change="+18.2%"
               changeType="positive"
               icon={DollarSign}
@@ -78,8 +80,13 @@ const Index = () => {
         </div>
         
         {/* Product Table */}
-        <div className="animate-fade-in" style={{ animationDelay: "0.45s" }}>
+        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.45s" }}>
           <ProductTable />
+        </div>
+
+        {/* Store Network Section */}
+        <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <StoreNetworkSection />
         </div>
       </main>
       
