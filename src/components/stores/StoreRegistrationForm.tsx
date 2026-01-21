@@ -34,9 +34,10 @@ type RegistrationFormData = z.infer<typeof registrationSchema>;
 interface StoreRegistrationFormProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  onSuccess?: () => void;
 }
 
-const StoreRegistrationForm = ({ open, onOpenChange }: StoreRegistrationFormProps) => {
+const StoreRegistrationForm = ({ open, onOpenChange, onSuccess }: StoreRegistrationFormProps) => {
   const [step, setStep] = useState(1);
   const [showSuccess, setShowSuccess] = useState(false);
   const queryClient = useQueryClient();
@@ -90,6 +91,7 @@ const StoreRegistrationForm = ({ open, onOpenChange }: StoreRegistrationFormProp
       setTimeout(() => {
         setShowSuccess(false);
         onOpenChange(false);
+        onSuccess?.();
       }, 2000);
     },
     onError: (error) => {
