@@ -20,9 +20,14 @@ const Dashboard = () => {
           <p className="text-muted-foreground">Monitor your inventory and demand predictions</p>
         </div>
         
+        {/* Daily Material Records */}
+        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.1s" }}>
+          <DailyRecordUpload />
+        </div>
+
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <div className="animate-fade-in" style={{ animationDelay: "0.15s" }}>
             <MetricCard
               title="Total Products"
               value="248"
@@ -32,7 +37,7 @@ const Dashboard = () => {
               description="Active inventory items"
             />
           </div>
-          <div className="animate-fade-in" style={{ animationDelay: "0.15s" }}>
+          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <MetricCard
               title="Monthly Sales"
               value="₹62,400"
@@ -42,7 +47,7 @@ const Dashboard = () => {
               description="Revenue this month"
             />
           </div>
-          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="animate-fade-in" style={{ animationDelay: "0.25s" }}>
             <MetricCard
               title="Forecast Accuracy"
               value="94.2%"
@@ -52,7 +57,7 @@ const Dashboard = () => {
               description="ML model performance"
             />
           </div>
-          <div className="animate-fade-in" style={{ animationDelay: "0.25s" }}>
+          <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <MetricCard
               title="Low Stock Alerts"
               value="6"
@@ -63,34 +68,29 @@ const Dashboard = () => {
             />
           </div>
         </div>
+
+        {/* AI Insights */}
+        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.35s" }}>
+          <InsightCard />
+        </div>
         
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <SalesChart />
           </div>
-          <div className="space-y-6">
-            <div className="animate-fade-in" style={{ animationDelay: "0.35s" }}>
-              <InsightCard />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <QuickActions />
-            </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.45s" }}>
+            <QuickActions />
           </div>
         </div>
         
-        {/* Daily Material Records */}
-        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.45s" }}>
-          <DailyRecordUpload />
-        </div>
-
         {/* Product Table */}
         <div className="animate-fade-in mb-8" style={{ animationDelay: "0.5s" }}>
           <ProductTable />
         </div>
 
         {/* Store Network Section */}
-        <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
+        <div className="animate-fade-in" style={{ animationDelay: "0.55s" }}>
           <StoreNetworkSection />
         </div>
       </main>
