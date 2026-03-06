@@ -36,7 +36,6 @@ const DailyRecordUpload = () => {
   useEffect(() => {
     fetchRecords();
   }, []);
-  });
 
   const fetchRecords = async () => {
     setLoading(true);
