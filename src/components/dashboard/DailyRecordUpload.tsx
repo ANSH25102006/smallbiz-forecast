@@ -33,9 +33,9 @@ const DailyRecordUpload = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const cameraInputRef = useRef<HTMLInputElement>(null);
 
-  // Fetch records on mount
-  useState(() => {
+  useEffect(() => {
     fetchRecords();
+  }, []);
   });
 
   const fetchRecords = async () => {
