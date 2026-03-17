@@ -72,19 +72,9 @@ const Dashboard = () => {
           <InsightCard />
         </div>
         
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <SalesChart />
-          </div>
-          <div className="animate-fade-in" style={{ animationDelay: "0.45s" }}>
-            <QuickActions />
-          </div>
-        </div>
-        
-        {/* Product Table */}
-        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.5s" }}>
-          <ProductTable />
+        {/* Sales Chart */}
+        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.4s" }}>
+          <SalesChart />
         </div>
 
         {/* Store Network Section */}
