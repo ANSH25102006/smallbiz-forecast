@@ -2,9 +2,7 @@ import { Package, TrendingUp, AlertTriangle, DollarSign } from "lucide-react";
 import Header from "@/components/layout/Header";
 import MetricCard from "@/components/dashboard/MetricCard";
 import SalesChart from "@/components/dashboard/SalesChart";
-import ProductTable from "@/components/dashboard/ProductTable";
 import InsightCard from "@/components/dashboard/InsightCard";
-import QuickActions from "@/components/dashboard/QuickActions";
 import DailyRecordUpload from "@/components/dashboard/DailyRecordUpload";
 import StoreNetworkSection from "@/components/stores/StoreNetworkSection";
 
@@ -74,19 +72,9 @@ const Dashboard = () => {
           <InsightCard />
         </div>
         
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <SalesChart />
-          </div>
-          <div className="animate-fade-in" style={{ animationDelay: "0.45s" }}>
-            <QuickActions />
-          </div>
-        </div>
-        
-        {/* Product Table */}
-        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.5s" }}>
-          <ProductTable />
+        {/* Sales Chart */}
+        <div className="animate-fade-in mb-8" style={{ animationDelay: "0.4s" }}>
+          <SalesChart />
         </div>
 
         {/* Store Network Section */}
