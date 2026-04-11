@@ -360,6 +360,48 @@ const translations: Record<Language, Record<string, string>> = {
     "chatbot.welcome": "👋 Hi! I'm your AI business assistant. Ask me about sales, inventory, forecasts, expenses, or anything about your store!",
     "chatbot.placeholder": "Ask me anything...",
 
+    // Setup Wizard
+    "setup.welcomeTitle": "Let's set up your shop",
+    "setup.shopTypeQuestion": "What type of shop do you run?",
+    "setup.grocery": "Grocery",
+    "setup.clothing": "Clothing",
+    "setup.electronics": "Electronics",
+    "setup.pharmacy": "Pharmacy",
+    "setup.restaurant": "Restaurant",
+    "setup.general": "General Store",
+    "setup.customersTitle": "Daily Customers",
+    "setup.customersDesc": "How many customers visit per day on average?",
+    "setup.avgBillTitle": "Average Bill Value",
+    "setup.avgBillDesc": "What's the average amount a customer spends?",
+    "setup.estimatedDaily": "Estimated Daily Sales",
+    "setup.customers": "customers",
+    "setup.perBill": "per bill",
+    "setup.back": "Back",
+    "setup.next": "Next",
+    "setup.getStarted": "Get Started",
+
+    // Quick Daily Input
+    "quickInput.title": "Today's Sales",
+    "quickInput.subtitle": "Enter in 10 seconds — that's all it takes",
+    "quickInput.topProductOptional": "Top-selling product today (optional)",
+    "quickInput.prefilled": "Pre-filled from your last entry",
+    "quickInput.saveAndSee": "Save & See Insights",
+    "quickInput.todaySummary": "Today's Summary",
+    "quickInput.todaysSales": "Today's Sales",
+    "quickInput.vsAvg": "vs average",
+    "quickInput.avgDaily": "Daily Average",
+    "quickInput.basedOn": "Based on",
+    "quickInput.days": "days",
+    "quickInput.updateSales": "Update today's sales",
+
+    // AI Insights
+    "insight.aiInsight": "AI Insight",
+    "insight.keepTracking": "Keep logging daily sales — after a few days, we'll spot trends and give you smart recommendations.",
+    "insight.salesIncreasing": "Your sales are increasing steadily! Consider stocking up on your top products to meet rising demand.",
+    "insight.salesDecreasing": "Sales have dipped recently. Try a small promotion or check if a popular product went out of stock.",
+    "insight.weekendDemand": "Weekend ahead! Based on patterns, you may see higher demand — make sure your shelves are stocked.",
+    "insight.salesSteady": "Sales are steady. Great consistency! Look for opportunities to upsell or introduce a new product.",
+
     // Common
     "common.storeOwner": "Store Owner",
     "common.something_wrong": "Something went wrong.",
