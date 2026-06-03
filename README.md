@@ -1,250 +1,375 @@
-Project Overview
+<div align="center">
 
-This project is a modern web application built with a component-driven frontend architecture. The system is designed to deliver a fast, scalable, and maintainable user interface while maintaining a clean and modular development workflow.
-The application uses a modern toolchain based on Vite and React for fast development and optimized builds. TypeScript provides static typing and improved code reliability, while Tailwind CSS and shadcn-ui enable consistent and responsive UI design.
-The project is integrated with the Lovable development platform, which allows rapid iteration, automatic code updates, and simplified deployment.
+# 📈 Shop Forecast Pro
 
-Architecture Overview — 4-Layer Frontend Pipeline
+### AI-Powered Retail Forecasting & Inventory Optimization Platform
 
-| Layer | Name                 | Responsibility                                                     | Technology              |
-| ----- | -------------------- | ------------------------------------------------------------------ | ----------------------- |
-| 1     | UI Layer             | Handles rendering of pages and reusable interface components       | React, TypeScript       |
-| 2     | State & Logic        | Manages application state and UI interactions                      | React Hooks, Zustand    |
-| 3     | Data Integration     | Handles API requests, WebSocket communication, and data processing | Fetch API, WebSocket    |
-| 4     | Styling & Components | Provides responsive design and reusable UI components              | Tailwind CSS, shadcn-ui |
+A modern analytics platform designed to help retailers predict demand, optimize inventory levels, and make data-driven business decisions through intelligent forecasting, interactive dashboards, and reinforcement learning simulations.
 
-Data Flow:
-<br>
-User Interaction → Component Logic → State Update → API/Data Layer → UI Re-render
-<br>
-Repository Structure
+![React](https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue?style=for-the-badge\&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/Styling-TailwindCSS-06B6D4?style=for-the-badge\&logo=tailwindcss)
+![Vite](https://img.shields.io/badge/Build-Vite-646CFF?style=for-the-badge\&logo=vite)
+![OpenEnv](https://img.shields.io/badge/RL-OpenEnv-orange?style=for-the-badge)
+![Lovable](https://img.shields.io/badge/Built%20With-Lovable-purple?style=for-the-badge)
 
-project-root/
-├── public/
-│   Static assets and icons
-│
-├── src/
-│   ├── components/
-│   │   Reusable UI components
-│   │
-│   ├── pages/
-│   │   Application pages and views
-│   │
-│   ├── hooks/
-│   │   Custom React hooks
-│   │
-│   ├── utils/
-│   │   Utility functions and helpers
-│   │
-│   ├── services/
-│   │   API calls and external integrations
-│   │
-│   ├── styles/
-│   │   Global styling configuration
-│   │
-│   ├── App.tsx
-│   │   Root React component
-│   │
-│   └── main.tsx
-│       Application entry point
-│
-├── package.json
-│   Dependency management and scripts
-│
-├── vite.config.ts
-│   Vite configuration
-│
-└── README.md
-    Project documentation
-
-
-Technology Stack
-<br>
-A.) Frontend Framework
-<br>
-1.) React - Component-based UI library for building dynamic and interactive interfaces.
-<br>
-2.) TypeScript - Strongly typed JavaScript that improves code reliability and developer productivity.
-<br>
-3.) Vite - Next-generation frontend build tool that provides extremely fast development server startup and optimized builds.
-<br>
-
-B.) UI and Styling
-<br>
-1.) Tailwind CSS - Utility-first CSS framework for building responsive interfaces quickly.
-<br>
-2.)shadcn-ui - Reusable and accessible UI component library built on top of Tailwind CSS.
-<br>
-
-C.)Development Tools
-<br>
-1.) Node.js - Runtime environment required to run the project locally.
-<br>
-2.) npm - Package manager used to install and manage project dependencies.
-<br>
-3.) Git and GitHub - Version control and project collaboration platform.
-<br>
-
-Installation
-<br>
-To run the project locally, ensure that Node.js and npm are installed.
-<br>
-Step 1 — Clone the Repository  -- git clone <YOUR_GIT_URL>
-<br>
-Step 2 — Navigate to the Project Directory  -- cd <YOUR_PROJECT_NAME>
-<br>
-Step 3 — Install Dependencies  -- npm install
-<br>
-Step 4 — Start the Development Server  -- npm run dev
-<br>
-
-The development server will start with hot reloading enabled, allowing instant preview of changes.
-
-Running the Application
-<br>
-Once the development server is started, the application will be available at:
-<br>
-Frontend Application
-<br>
-http://localhost:5173
-<br>
-Any code changes will automatically trigger a rebuild and refresh the browser.
-<br>
-
-Deployment
-<br>
-The project can be deployed directly using the Lovable platform.
-<br>
-Steps to deploy:
-<br>
-
-1.) Open the project dashboard in Lovable.
-<br>
-2.) Navigate to the Share section.
-<br>
-3.) Select the Publish option.
-<br>
-4.) Lovable will automatically build and deploy the latest version.
-<br>
-
-Custom Domain Configuration
-<br>
-A custom domain can be connected through the project settings in Lovable.
-<br>
-Steps:
-<br>
-1.) Navigate to the Project Settings.
-<br>
-2.) Open the Domains section.
-<br>
-3.) Click Connect Domain.
-<br>
-4.) Follow the domain setup instructions.
-<br>
-
-Documentation reference:
-<br>
-https://docs.lovable.dev/features/custom-domain#custom-domain
-
-Development Workflow
-<br>
-The recommended workflow for contributing to the project is:
-<br>
-1.) Clone the repository.
-<br>
-2.) Create a new feature branch.
-<br>
-3.) Implement changes locally.
-<br>
-4.) Commit updates with clear commit messages.
-<br>
-5.) Push the branch and open a pull request.
-<br>
-This ensures a clean and maintainable version history.
-<br>
-
-Future Improvements
-<br>
-1.) Planned improvements for the project include:
-<br>
-2.) Enhanced component reusability
-<br>
-3.) Advanced state management patterns
-<br>
-4.) Performance optimization
-<br>
-5.) Improved testing coverage
-<br>
-6.) Integration with external APIs and services
+</div>
 
 ---
 
-## OpenEnv Integration
+# 📌 Overview
 
-OpenEnv is a standalone Python reinforcement-learning environment that simulates shop management decisions. It runs independently via CLI and does **not** affect the frontend.
+Shop Forecast Pro is a next-generation retail analytics and forecasting platform built to help businesses understand demand patterns, improve inventory planning, and maximize profitability.
 
-### Structure
+The application combines modern frontend technologies with forecasting models and simulation environments to provide actionable insights into sales trends, stock management, and pricing strategies.
 
+In addition to the analytics dashboard, the project includes **OpenEnv**, a reinforcement learning environment that simulates retail decision-making scenarios such as inventory optimization, demand forecasting, and profit maximization.
+
+---
+
+# 🎯 Problem Statement
+
+Retail businesses often struggle with:
+
+* Inaccurate demand forecasting
+* Overstocking and stock shortages
+* Poor inventory planning
+* Revenue loss due to inefficient pricing
+* Lack of actionable analytics
+* Difficulty evaluating operational strategies
+
+Traditional management approaches often rely on historical data without intelligent prediction capabilities.
+
+---
+
+# 💡 Solution
+
+Shop Forecast Pro addresses these challenges through:
+
+* Demand forecasting and trend analysis
+* Smart inventory planning
+* Interactive analytics dashboards
+* Business performance monitoring
+* Reinforcement learning simulations
+* Data-driven decision support systems
+
+The platform empowers retailers to make smarter operational decisions backed by predictive insights.
+
+---
+
+# ✨ Key Features
+
+## 📊 Forecasting Dashboard
+
+* Sales trend visualization
+* Demand prediction insights
+* Product performance analysis
+* Inventory monitoring
+
+## 📈 Smart Analytics
+
+* Revenue tracking
+* Business performance metrics
+* Forecast accuracy analysis
+* Trend identification
+
+## 📦 Inventory Optimization
+
+* Stock level monitoring
+* Overstock detection
+* Stockout prevention
+* Inventory planning recommendations
+
+## ⚡ Real-Time Insights
+
+* Dynamic business metrics
+* Interactive visualizations
+* Instant data updates
+* Decision-support analytics
+
+## 🎨 Modern User Experience
+
+* Responsive interface
+* Clean dashboard design
+* Mobile-friendly layout
+* Reusable component architecture
+
+---
+
+# 🏗️ System Architecture
+
+## Frontend Pipeline
+
+```text
+User Interaction
+        │
+        ▼
+┌──────────────────────┐
+│      UI Layer        │
+│ React + TypeScript   │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│   State & Logic      │
+│ Hooks + Zustand      │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Data Integration     │
+│ APIs & WebSockets    │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Styling Components   │
+│ Tailwind + shadcn    │
+└──────────────────────┘
 ```
+
+### Data Flow
+
+```text
+User Interaction
+        ↓
+Component Logic
+        ↓
+State Management
+        ↓
+API/Data Layer
+        ↓
+UI Re-render
+```
+
+---
+
+# 🤖 OpenEnv Reinforcement Learning Module
+
+Shop Forecast Pro includes a standalone reinforcement-learning environment called **OpenEnv**.
+
+OpenEnv simulates real-world retail management decisions and provides an environment for evaluating forecasting and inventory strategies.
+
+### Capabilities
+
+* Demand Forecasting
+* Inventory Optimization
+* Dynamic Pricing
+* Profit Maximization
+* Performance Benchmarking
+
+### Environment Structure
+
+```text
 openenv/
-├── __init__.py        # Package entry point
-├── models.py          # State & Action dataclasses
-├── shop_env.py        # ShopEnv environment (reset / step / get_state)
-├── tasks.py           # 3 task definitions with grader functions
-└── baseline.py        # Rule-based baseline agent
-run_openenv.py         # CLI runner script
-openenv.yaml           # Environment specification
+├── models.py
+├── shop_env.py
+├── tasks.py
+├── baseline.py
+├── __init__.py
+├── openenv.yaml
+└── run_openenv.py
 ```
 
-### State Space
+---
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `time_step` | int | Current day (0-indexed) |
-| `products[].stock` | int | Current inventory |
-| `products[].daily_demand_mean` | float | Average daily demand |
-| `products[].demand_trend` | float | Demand growth rate |
-| `cumulative_revenue` | float | Total revenue so far |
-| `cumulative_cost` | float | Total costs so far |
+# 🧠 Reinforcement Learning Tasks
 
-### Action Space
+| Difficulty | Objective              | Duration |
+| ---------- | ---------------------- | -------- |
+| Easy       | Predict Next-Day Sales | 7 Days   |
+| Medium     | Optimize Inventory     | 7 Days   |
+| Hard       | Maximize Profit        | 30 Days  |
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `price_multipliers` | list[float] | Per-product price scaling (1.0 = no change) |
-| `restock_amounts` | list[int] | Units to order per product |
-| `discount_rates` | list[float] | Discount fraction (0.0–1.0) |
-| `demand_forecasts` | list[float] | Predicted demand (used for scoring) |
+### Reward System
 
-### Reward
+The environment evaluates strategies using:
 
-Continuous per-step reward:
-- **+** daily profit (revenue − restock cost)
-- **−** 50 × stockout events
-- **−** 0.5 × excess overstock units
-- **+** 10 × cumulative forecast accuracy
+✅ Profit Generation
 
-### Tasks
+✅ Forecast Accuracy
 
-| Difficulty | Task | Days | Metric |
-|------------|------|------|--------|
-| Easy | Predict next-day sales | 7 | Forecast accuracy (0–1) |
-| Medium | Optimise inventory | 7 | Stockout + overstock score (0–1) |
-| Hard | Maximise profit | 30 | Normalised profit (0–1) |
+✅ Inventory Efficiency
 
-### How to Run
+❌ Stockout Penalties
+
+❌ Overstock Penalties
+
+---
+
+# 📂 Project Structure
+
+```text
+project-root/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   ├── services/
+│   ├── styles/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── openenv/
+│   ├── models.py
+│   ├── shop_env.py
+│   ├── tasks.py
+│   └── baseline.py
+│
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+
+## State Management
+
+* React Hooks
+* Zustand
+
+## Styling
+
+* Tailwind CSS
+* shadcn/ui
+
+## Data Communication
+
+* Fetch API
+* WebSocket
+
+## Development Tools
+
+* Node.js
+* npm
+* Git
+* GitHub
+
+## Development Platform
+
+* Lovable
+
+## Simulation Environment
+
+* Python
+* OpenEnv
+* Reinforcement Learning Concepts
+
+---
+
+
+# 🚀 Getting Started
+
+### Clone Repository
 
 ```bash
-# Run all tasks with the baseline agent
-python3 run_openenv.py
+git clone https://github.com/ANSH25102006/Shop-Forecast-Pro.git
+```
 
-# Run a specific task
+### Navigate to Project
+
+```bash
+cd Shop-Forecast-Pro
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Application runs at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🧪 Running OpenEnv
+
+Run all benchmark tasks:
+
+```bash
+python3 run_openenv.py
+```
+
+Run individual tasks:
+
+```bash
 python3 run_openenv.py easy
+python3 run_openenv.py medium
 python3 run_openenv.py hard
 ```
 
-### Integration Hooks
+---
 
-- Product catalogue in `shop_env.py` mirrors the frontend mock data
-- Demand trends and forecast logic align with `SmartForecastCard.tsx`
-- No frontend files are modified; OpenEnv is fully isolated
+# 🌟 Key Learning Outcomes
+
+This project demonstrates experience with:
+
+* Advanced React Development
+* TypeScript Architecture
+* State Management Patterns
+* Data Visualization
+* Retail Analytics
+* Demand Forecasting Concepts
+* Inventory Optimization
+* Reinforcement Learning Environments
+* Scalable Frontend Design
+* Git & GitHub Workflows
+
+---
+
+# 🔮 Future Enhancements
+
+* Machine Learning Demand Models
+* AI-Based Inventory Recommendations
+* Automated Restocking Suggestions
+* Multi-Store Analytics
+* Advanced Forecast Visualizations
+* Predictive Revenue Analysis
+* Cloud-Based Data Pipelines
+* Real-Time Market Trend Integration
+* Supplier Optimization Engine
+* Enterprise Reporting Suite
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push your branch
+5. Open a Pull Request
+
+---
+
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star!
+
+Built with ❤️ by Ansh Pandey
+
+</div>
